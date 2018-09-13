@@ -1,2 +1,2 @@
-export * from './lib/notifications';
-export * from './lib/status-bar';
+export * from './lib/notifications/index';
+export * from './lib/status-bar/index';
