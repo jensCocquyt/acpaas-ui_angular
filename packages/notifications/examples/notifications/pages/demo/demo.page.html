@@ -1,3 +1,7 @@
 <h1 class="h3 u-margin-bottom">Notifications</h1>
 
-<aui-notifications></aui-notifications>
+<aui-statusbar
+	[notifications]="notifications$ | async"
+	[remainingMessage]="remainingMessage"
+	(clearNotification)="clearNotification($event)">
+</aui-statusbar>
