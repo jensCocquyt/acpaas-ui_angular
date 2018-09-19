@@ -21,10 +21,10 @@ Visit our [documentation site](https://acpaas-ui.digipolis.be/) for full how-to 
 
 | Name         | Default value | Description |
 | -----------  | ------ | -------------------------- |
-| `triggerNotification: ...args;` | - | A custom classname to add to the avatar. |
-| `loadNotifications: notifications: Notifications, action;` | - | CSS class for rendering an icon, Font Awesome is used in this example. |
-| `clearNotification: notification: any;` | - | URL to image src, renders an image. |
-| `clearTarget: target: string;` | - | Renders a string (letter). |
+| `triggerNotification: ...args;` | - | For triggering notifications. |
+| `loadNotifications: notifications: Notifications, action;` | - | Loading a notification with a certain action. |
+| `clearNotification: notification: any;` | - | To clear your notification. |
+| `clearTarget: target: string;` | - | xxx. |
 
 ### Example
 
