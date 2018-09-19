@@ -10,7 +10,7 @@ Handle notifications using the `NotificationStore`, with or without redux.
 ## Usage
 
 ```typescript
-import { NotificationsModule } from '@acpaas-ui/ngx-components/notification-service'`;
+import { NotificationsModule } from '@acpaas-ui/ngx-components/notifications'`;
 ```
 
 ## Documentation
@@ -21,31 +21,59 @@ Visit our [documentation site](https://acpaas-ui.digipolis.be/) for full how-to 
 
 | Name         | Default value | Description |
 | -----------  | ------ | -------------------------- |
-| `@Input() className: string;` | `''` | A custom classname to add to the avatar. |
-| `@Input() icon: string;` | - | CSS class for rendering an icon, Font Awesome is used in this example. |
-| `@Input() image: string;` | - | URL to image src, renders an image. |
-| `@Input() letter: string;` | - | Renders a string (letter). |
-| `@Input() size: sizes;` | `sizes.R` | The size of the avatar. This can be `sizes.R`) (regular, default, `sizes.S` (small), `sizes.M` (medium) or `sizes.L` (large) |
-| `@Input() title: string;` | `''` | The title for the avatar. |
+| `@Input() triggerNotification: ...args;` | `''` | A custom classname to add to the avatar. |
+| `@Input() loadNotifications: notifications: Notifications, action;` | - | CSS class for rendering an icon, Font Awesome is used in this example. |
+| `@Input() clearNotification: notification: any;` | - | URL to image src, renders an image. |
+| `@Input() clearTarget: target: string;` | - | Renders a string (letter). |
 
 ### Example
 
 ```
-import { AvatarModule } from '@acpaas-ui/ngx-components/avatar';
+import { NotificationsModule } from '@acpaas-ui/ngx-components/notifications';
 
 @NgModule({
 	imports: [
-		AvatarModule
-	]
-});
+		NotificationsModule.forRoot(
+			{401: 'you need to log in'},
+			{allowOverrides: true}),
+	],
+	declarations: [
+		Pages,
+	],
+})
 
 export class AppModule {};
 ```
-
 ```
-<aui-avatar image="https://robohash.org/acpaas-ui" title="My image"></aui-avatar>
-<aui-avatar icon="fa fa-user" title="An icon" size="L"></aui-avatar>
-<aui-avatar letter="T" title="The letter T" size="S"></aui-avatar>
+<aui-statusbar
+	[notifications]="notifications$ | async"
+	[remainingMessage]="remainingMessage"
+	(clearNotification)="clearNotification($event)">
+</aui-statusbar>
+```
+```
+public remainingMessage = '+ %{remaining} meer';
+
+	constructor(
+		private notificationsService: NotificationsService
+	) { }
+
+	get notificationService() {
+		return this.notificationsService;
+	}
+
+	public clearNotification(notification: Notification): void {
+		this.notificationsService.clearNotification(notification);
+	}
+
+	public setstandaardNotification(): void {
+		this.notificationsService.triggerNotification({
+			handle: '204',
+			message: 'This is a notification',
+			type: 'S',
+			timer: 3000,
+		});
+	}
 ```
 
 ## Contributing
