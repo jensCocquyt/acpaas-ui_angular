@@ -1,6 +1,6 @@
 # @acpaas-ui/ngx-components/notifications
 
-Handle notifications using the `NotificationStore`, with or without redux.
+Handle notifications using the `NotificationStore`.
 
 ## Dependencies
 * @acpaas-ui/notification-store
@@ -21,10 +21,10 @@ Visit our [documentation site](https://acpaas-ui.digipolis.be/) for full how-to 
 
 | Name         | Default value | Description |
 | -----------  | ------ | -------------------------- |
-| `@Input() triggerNotification: ...args;` | `''` | A custom classname to add to the avatar. |
-| `@Input() loadNotifications: notifications: Notifications, action;` | - | CSS class for rendering an icon, Font Awesome is used in this example. |
-| `@Input() clearNotification: notification: any;` | - | URL to image src, renders an image. |
-| `@Input() clearTarget: target: string;` | - | Renders a string (letter). |
+| `triggerNotification: ...args;` | - | A custom classname to add to the avatar. |
+| `loadNotifications: notifications: Notifications, action;` | - | CSS class for rendering an icon, Font Awesome is used in this example. |
+| `clearNotification: notification: any;` | - | URL to image src, renders an image. |
+| `clearTarget: target: string;` | - | Renders a string (letter). |
 
 ### Example
 
