@@ -1,26 +1,33 @@
-<h3 class="u-margin-bottom">Localstorage demo</h3>
+<h3 class="u-margin-bottom">Localstorage</h3>
 <div class="u-margin-bottom">A component for reading and writing data in Localstorage.
 </div>
 
-<h4 class="u-margin-bottom">Usage</h4>
 <div class="u-margin-bottom">
-	<aui-code-snippet [codeSnippet]="javascript1"></aui-code-snippet>
+    <aui-code-snippet [codeSnippet]="typescript1"></aui-code-snippet>
 </div>
 
-<h4 class="u-margin-bottom">Example(s)</h4>
+<div class="u-margin-bottom">
+    <aui-code-snippet [codeSnippet]="typescript2"></aui-code-snippet>
+</div>
 
-<div class="">
-	<button (click)="loggedIn()" class="a-button">
-		Log in
-	</button>
+<div class="u-margin-bottom">
+    <aui-code-snippet [codeSnippet]="example"></aui-code-snippet>
 </div>
-<div class="">
-	<button (click)="loggedOut()" class="a-button">
-		Log out
-	</button>
+
+<div class="u-margin-bottom">
+    <button (click)="loggedIn()" class="a-button u-margin-right">
+        Log in
+    </button>
+    <button (click)="loggedOut()" class="a-button u-margin-right">
+        Log out
+    </button>
+    <button (click)="init()" class="a-button">
+        Init
+    </button>
 </div>
-<div class="">
-	<button (click)="init()" class="a-button">
-		Init
-	</button>
+<div class="u-margin-bottom">
+    <button (click)="getItem()" class="a-button u-margin-right">
+        Get item from local storage
+    </button>
+    <label class="a-input__label a-input__label--inline">{{ this.item }}</label>
 </div>

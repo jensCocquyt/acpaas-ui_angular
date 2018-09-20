@@ -8,11 +8,14 @@ import { Pages } from './pages/index';
 @NgModule({
 	imports: [
 		CommonModule,
-		LocalstorageModule,
+		LocalstorageModule.forRoot({
+			storageType: 'sessionStorage',
+			identifier: 'my-app-v1',
+		}),
 		CodeSnippetModule,
 	],
 	declarations: [
 		Pages,
 	],
 })
-export class LocalstorageExamplesModule {}
+export class LocalstorageExamplesModule { }
