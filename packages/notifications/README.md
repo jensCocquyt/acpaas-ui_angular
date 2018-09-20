@@ -17,14 +17,14 @@ import { NotificationsModule } from '@acpaas-ui/ngx-components/notifications'`;
 
 Visit our [documentation site](https://acpaas-ui.digipolis.be/) for full how-to docs and guidelines
 
-### API
+### Methods
 
-| Name         | Default value | Description |
-| -----------  | ------ | -------------------------- |
-| `triggerNotification: ...args;` | - | For triggering notifications. |
-| `loadNotifications: notifications: Notifications, action;` | - | Loading a notification with a certain action. |
-| `clearNotification: notification: any;` | - | To clear your notification. |
-| `clearTarget: target: string;` | - | xxx. |
+| Method       | Description |
+| -----------  | -------------------------- |
+| `triggerNotification(...args)` | For triggering notifications. |
+| `loadNotifications(notifications: Notifications, action)` | Loading a notification with a certain action. |
+| `clearNotification(notification: any)` | To clear your notification. |
+| `clearTarget(target: string)` | xxx. |
 
 ### Example
 
