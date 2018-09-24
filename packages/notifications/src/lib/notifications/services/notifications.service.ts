@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NotificationStore } from '@acpaas-ui/ngx-components/notifications';
+import { NotificationStore } from '@acpaas-ui/js-notification-store';
 
 @Injectable()
 export class NotificationsService {
