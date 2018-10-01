@@ -22,7 +22,7 @@ import { Pages } from './pages/index';
 		CommonModule,
 		RouterModule,
 		CookieconsentModule.forRoot({
-			autoInit: true,
+			autoInit: false,
 			content: {
 				message: 'I am the cookie consent demo. Will you allow my cookies?',
 				dismiss: 'Allow cookies',
@@ -39,7 +39,7 @@ import { Pages } from './pages/index';
 				messagelink: `<p id="cookieconsent:desc">{{message}}
 					<a aria-label="learn more about cookies" tabindex="0" href="{{href}}" target="_blank">{{link}}</a>
 				</p>`,
-				dismiss: '<button aria-label="dismiss cookie message" tabindex="0" class="a-button">{{dismiss}}</button>',
+				dismiss: '<button aria-label="dismiss cookie message" tabindex="0" class="a-button cc-btn cc-dismiss">{{dismiss}}</button>',
 			},
 		}),
 		FooterModule,
