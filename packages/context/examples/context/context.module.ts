@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotificationsModule } from '@acpaas-ui/ngx-components/notifications';
+import { ContextModule } from '@acpaas-ui/ngx-components/context';
 import { CodeSnippetModule } from '@acpaas-ui/ngx-components/code-snippet';
 
 import { Pages } from './pages/index';
@@ -8,14 +8,11 @@ import { Pages } from './pages/index';
 @NgModule({
 	imports: [
 		CommonModule,
-		NotificationsModule,
-		/* NotificationsModule.forRoot(
-			{401: 'you need to log in'},
-			{allowOverrides: true}), */
+		ContextModule,
 		CodeSnippetModule,
 	],
 	declarations: [
 		Pages,
 	],
 })
-export class NotificationsExamplesModule {}
+export class ContextExamplesModule {}

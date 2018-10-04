@@ -17,16 +17,16 @@ export class NotificationsDemoPageComponent {
 	}
 
 	public clearNotification(notification: Notification): void {
-		this.notificationsService.clearNotification(notification);
+		// this.notificationsService.clearNotification(notification);
 	}
 
 	public setstandaardNotification(): void {
-		this.notificationsService.triggerNotification({
+		/* this.notificationsService.triggerNotification({
 			handle: '204',
 			message: 'This is a notification',
 			type: 'S',
 			timer: 3000,
-		});
+		}); */
 	}
 
 }
